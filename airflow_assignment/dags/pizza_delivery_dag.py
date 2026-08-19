@@ -53,11 +53,6 @@ def check_ingredients(**context):
     """
     Check whether every requested topping is available.
 
-    If all toppings are available, continue to add_toppings.
-
-    If any topping is unavailable, branch to cancel_order.
-    Airflow will automatically skip the pizza-production tasks
-    that belong to the other branch.
     """
     order_id = context["ti"].xcom_pull(
         task_ids="receive_order",
@@ -158,7 +153,6 @@ def quality_check(**context):
         order_id,
     )
 
-    # Simulated quality check for this assignment.
     quality_passed = True
 
     if quality_passed:
