@@ -1,0 +1,25 @@
+# Airflow generated files
+logs/
+__pycache__/
+*.pyc
+
+# Airflow local files
+airflow-webserver.pid
+airflow-scheduler.pid
+
+# local Airflow configuration
+airflow.cfg 
+webserver_config.py 
+
+# Environment files / secrets
+.env
+.env.*
+*.secret
+
+# Local IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
